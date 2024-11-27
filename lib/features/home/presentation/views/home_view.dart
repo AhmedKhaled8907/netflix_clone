@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:netflix_clone/core/utils/managers/assets_manager.dart';
+import 'package:netflix_clone/core/utils/managers/router_manager.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
+import 'package:netflix_clone/features/home/presentation/views/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,14 +12,12 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
-      body: const Center(
-        child: Text('Home View'),
-      ),
+      appBar: _buildAppBar(context),
+      body: const HomeViewBody(),
     );
   }
 
-  AppBar _buildAppBar() {
+  AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       leading: Padding(
         padding: const EdgeInsets.only(left: AppPadding.p8),
@@ -27,7 +28,11 @@ class HomeView extends StatelessWidget {
       ),
       actions: [
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(
+              RouterManager.kSearchRoute,
+            );
+          },
           child: Padding(
             padding: const EdgeInsets.only(right: AppPadding.p8),
             child: SvgPicture.asset(
