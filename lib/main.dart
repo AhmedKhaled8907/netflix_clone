@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/core/utils/functions/service_locator.dart';
 import 'package:netflix_clone/core/utils/managers/router_manager.dart';
 import 'package:netflix_clone/core/utils/managers/string_manager.dart';
 import 'package:netflix_clone/core/utils/managers/theme_manager.dart';
 
 void main() {
   runApp(const MyApp());
+  setupServiceLocator();
 }
 
 class MyApp extends StatelessWidget {
