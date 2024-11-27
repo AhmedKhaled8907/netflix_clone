@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_single_quotes
-class AssetsManager {
-  AssetsManager._();
+class Assets {
+  Assets._();
   
   /// Assets for imagesHome
   /// assets/images/home.svg
