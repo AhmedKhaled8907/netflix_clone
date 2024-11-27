@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
 import 'package:netflix_clone/core/utils/widgets/movie_item_list_view.dart';
 
-
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
@@ -17,4 +16,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-

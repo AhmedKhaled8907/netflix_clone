@@ -12,7 +12,6 @@ abstract class StyleManager {
         fontSize: FontSize.s12,
       ),
       fontWeight: FontWeights.regular,
-      
     );
   }
 
