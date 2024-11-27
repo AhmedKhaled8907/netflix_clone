@@ -10,7 +10,7 @@ class MovieItemListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      itemCount: 10,
+      itemCount: 20,
       physics: const BouncingScrollPhysics(),
       separatorBuilder: (BuildContext context, int index) {
         return const SizedBox(height: AppSize.s16);
@@ -21,4 +21,3 @@ class MovieItemListView extends StatelessWidget {
     );
   }
 }
-

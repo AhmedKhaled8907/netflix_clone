@@ -14,11 +14,14 @@ class MovieItem extends StatelessWidget {
       children: [
         Expanded(
           flex: 2,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(AppSize.s8),
-            child: Image.asset(
-              Assets.imagesRRR,
-              fit: BoxFit.fill,
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(AppSize.s8),
+              child: Image.asset(
+                Assets.imagesPoster,
+                fit: BoxFit.fill,
+              ),
             ),
           ),
         ),
@@ -36,7 +39,7 @@ class MovieItem extends StatelessWidget {
               const SizedBox(height: AppPadding.p8),
               Text(
                 'A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.',
-                maxLines: 2,
+                maxLines: 3,
                 style: StyleManager.styleRegular12(context).copyWith(
                   overflow: TextOverflow.ellipsis,
                 ),

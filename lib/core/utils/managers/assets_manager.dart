@@ -22,6 +22,10 @@ class Assets {
   /// assets/images/play.svg
   static const String imagesPlay = "assets/images/play.svg";
 
+  /// Assets for imagesPoster
+  /// assets/images/poster.jpg
+  static const String imagesPoster = "assets/images/poster.jpg";
+
   /// Assets for imagesRRR
   /// assets/images/RRR.png
   static const String imagesRRR = "assets/images/RRR.png";
