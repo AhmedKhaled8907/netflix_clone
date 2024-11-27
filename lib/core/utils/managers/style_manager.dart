@@ -3,6 +3,19 @@ import 'package:netflix_clone/core/utils/managers/color_manager.dart';
 import 'package:netflix_clone/core/utils/managers/font_manager.dart';
 
 abstract class StyleManager {
+  static TextStyle styleRegular12(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      color: ColorManager.primaryColor.withOpacity(0.8),
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s12,
+      ),
+      fontWeight: FontWeights.regular,
+      
+    );
+  }
+
   static TextStyle styleMedium12(BuildContext context) {
     return TextStyle(
       fontFamily: FontConstants.fontFamily,

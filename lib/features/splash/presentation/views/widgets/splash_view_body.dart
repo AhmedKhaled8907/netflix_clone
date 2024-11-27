@@ -38,7 +38,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       children: [
         Center(
           child: SvgPicture.asset(
-            Assets.imagesLogo,
+            Assets.imagesNetflixLogo,
           ),
         ),
       ],
