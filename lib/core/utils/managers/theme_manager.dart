@@ -5,5 +5,8 @@ abstract class ThemeManager {
   static final darkTheme = ThemeData.dark().copyWith(
     primaryColor: ColorManager.primaryColor,
     scaffoldBackgroundColor: ColorManager.secondaryColor,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: ColorManager.secondaryColor,
+    ),
   );
 }
