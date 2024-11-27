@@ -17,8 +17,10 @@ dependencies:
   flutter_svg: ^2.0.16
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.14.1"
   flutter_test:
     sdk: flutter
+    
 
   flutter_lints: ^4.0.0
 
@@ -45,3 +47,13 @@ flutter_assets:
   output_path: lib/core/utils/managers/
   filename: assets_manager.dart
   field_prefix:
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/images/logo.png
+  min_sdk_android: 21
+  adaptive_icon_foreground: "assets/images/logo.png"
+  adaptive_icon_background: "assets/images/logo.png"
+  remove_alpha_ios: true
