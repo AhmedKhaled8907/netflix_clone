@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/utils/managers/style_manager.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
-import 'package:netflix_clone/features/home/domain/entity/movie_entity.dart';
+import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
 
 class MovieItem extends StatelessWidget {
   const MovieItem({

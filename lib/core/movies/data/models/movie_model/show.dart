@@ -1,4 +1,4 @@
-import 'package:netflix_clone/features/home/domain/entity/movie_entity.dart';
+import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
 
 class Show extends MovieEntity {
   final int? id;

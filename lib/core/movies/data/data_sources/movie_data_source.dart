@@ -1,8 +1,8 @@
 
 import 'package:dio/dio.dart';
 import 'package:netflix_clone/core/utils/managers/api_manager.dart';
-import 'package:netflix_clone/features/home/data/models/movie_model/show.dart';
-import 'package:netflix_clone/features/home/domain/entity/movie_entity.dart';
+import 'package:netflix_clone/core/movies/data/models/movie_model/show.dart';
+import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
 
 abstract class MovieDataSource {
   Future<List<MovieEntity>> getMovies();

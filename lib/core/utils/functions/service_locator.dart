@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:netflix_clone/features/home/data/data_sources/movie_data_source.dart';
-import 'package:netflix_clone/features/home/data/repos/movie_repo_impl.dart';
-import 'package:netflix_clone/features/home/domain/repo/movie_repo.dart';
-import 'package:netflix_clone/features/home/domain/usecase/get_movies_usecase.dart';
+import 'package:netflix_clone/core/movies/data/data_sources/movie_data_source.dart';
+import 'package:netflix_clone/core/movies/data/repos/movie_repo_impl.dart';
+import 'package:netflix_clone/core/movies/domain/repo/movie_repo.dart';
+import 'package:netflix_clone/core/movies/domain/usecase/get_movies_usecase.dart';
 import 'package:netflix_clone/features/home/presentation/bloc/movie_cubit/movie_cubit.dart';
 
 final getIt = GetIt.instance;

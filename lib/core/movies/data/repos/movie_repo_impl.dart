@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:netflix_clone/core/error/failure.dart';
-import 'package:netflix_clone/features/home/data/data_sources/movie_data_source.dart';
-import 'package:netflix_clone/features/home/domain/entity/movie_entity.dart';
-import 'package:netflix_clone/features/home/domain/repo/movie_repo.dart';
+import 'package:netflix_clone/core/movies/data/data_sources/movie_data_source.dart';
+import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
+import 'package:netflix_clone/core/movies/domain/repo/movie_repo.dart';
 
 class MovieRepoImpl extends MovieRepo {
   final MovieDataSource movieDataSource;
