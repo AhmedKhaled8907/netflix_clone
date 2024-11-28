@@ -1,12 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/core/utils/managers/assets_manager.dart';
 import 'package:netflix_clone/core/utils/managers/style_manager.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
+import 'package:netflix_clone/features/home/domain/entity/movie_entity.dart';
 
 class MovieItem extends StatelessWidget {
   const MovieItem({
     super.key,
+    required this.movie,
   });
+
+  final MovieEntity movie;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +22,9 @@ class MovieItem extends StatelessWidget {
             aspectRatio: 1,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(AppSize.s8),
-              child: Image.asset(
-                Assets.imagesPoster,
-                fit: BoxFit.fill,
+              child: CachedNetworkImage(
+                imageUrl: movie.poster!,
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
           ),
@@ -33,12 +37,12 @@ class MovieItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'RRR',
+                movie.title!,
                 style: StyleManager.styleBold18(context),
               ),
               const SizedBox(height: AppPadding.p8),
               Text(
-                'A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.',
+               movie.summary!,
                 maxLines: 3,
                 style: StyleManager.styleRegular12(context).copyWith(
                   overflow: TextOverflow.ellipsis,

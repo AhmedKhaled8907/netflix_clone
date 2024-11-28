@@ -5,6 +5,7 @@ import 'package:netflix_clone/features/home/data/data_sources/movie_data_source.
 import 'package:netflix_clone/features/home/data/repos/movie_repo_impl.dart';
 import 'package:netflix_clone/features/home/domain/repo/movie_repo.dart';
 import 'package:netflix_clone/features/home/domain/usecase/get_movies_usecase.dart';
+import 'package:netflix_clone/features/home/presentation/bloc/movie_cubit/movie_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -22,4 +23,6 @@ void setupServiceLocator() {
   );
 
   getIt.registerLazySingleton(() => GetMoviesUsecase(getIt()));
+
+  getIt.registerFactory(() => MovieCubit(getIt()));
 }
