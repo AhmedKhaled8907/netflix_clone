@@ -20,7 +20,10 @@ class HomeView extends StatelessWidget {
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       leading: Padding(
-        padding: const EdgeInsets.only(left: AppPadding.p8),
+        padding: const EdgeInsets.only(
+          left: AppPadding.p16,
+          top: AppPadding.p8,
+        ),
         child: SvgPicture.asset(
           Assets.imagesLogo2,
           fit: BoxFit.fill,
@@ -34,7 +37,10 @@ class HomeView extends StatelessWidget {
             );
           },
           child: Padding(
-            padding: const EdgeInsets.only(right: AppPadding.p8),
+            padding: const EdgeInsets.only(
+              right: AppPadding.p16,
+              top: AppPadding.p8,
+            ),
             child: SvgPicture.asset(
               Assets.imagesSearch,
               fit: BoxFit.fill,

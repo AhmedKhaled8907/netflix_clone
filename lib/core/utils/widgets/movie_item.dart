@@ -23,8 +23,11 @@ class MovieItem extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(AppSize.s8),
               child: CachedNetworkImage(
-                imageUrl: movie.poster!,
-                errorWidget: (context, url, error) => const Icon(Icons.error),
+                imageUrl: movie.poster ?? '',
+                fit: BoxFit.fill,
+                errorWidget: (context, url, error) => const Icon(
+                  Icons.error,
+                ),
               ),
             ),
           ),
@@ -42,7 +45,7 @@ class MovieItem extends StatelessWidget {
               ),
               const SizedBox(height: AppPadding.p8),
               Text(
-               movie.summary!,
+                stripHtmlTags(movie.summary!),
                 maxLines: 3,
                 style: StyleManager.styleRegular12(context).copyWith(
                   overflow: TextOverflow.ellipsis,
@@ -53,5 +56,14 @@ class MovieItem extends StatelessWidget {
         )
       ],
     );
+  }
+
+  String stripHtmlTags(String htmlText) {
+    final RegExp exp = RegExp(
+      r"<[^>]*>",
+      multiLine: true,
+      caseSensitive: false,
+    );
+    return htmlText.replaceAll(exp, '');
   }
 }

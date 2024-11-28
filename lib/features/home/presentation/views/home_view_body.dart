@@ -12,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: AppPadding.p8,
-        horizontal: AppPadding.p16,
+        horizontal: AppPadding.p20,
       ),
       child: BlocConsumer<MovieCubit, MovieState>(
         listener: (context, state) {
