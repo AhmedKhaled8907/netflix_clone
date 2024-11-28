@@ -93,7 +93,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 24,
+        vertical: AppSize.s16,
         // horizontal: 8,
       ),
       child: Column(

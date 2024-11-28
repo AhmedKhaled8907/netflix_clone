@@ -24,7 +24,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       () {
         if (mounted) {
           GoRouter.of(context).pushReplacement(
-            RouterManager.kHomeRoute,
+            RouterManager.kMainRoute,
           );
         }
       },

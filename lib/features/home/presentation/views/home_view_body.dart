@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
 import 'package:netflix_clone/core/utils/widgets/movie_item_list_view.dart';
-import 'package:netflix_clone/features/home/presentation/bloc/movie_cubit/movie_cubit.dart';
+import 'package:netflix_clone/features/home/presentation/controller/movie_cubit/movie_cubit.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

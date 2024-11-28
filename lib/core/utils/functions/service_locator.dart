@@ -5,7 +5,8 @@ import 'package:netflix_clone/core/movies/data/repos/movie_repo_impl.dart';
 import 'package:netflix_clone/core/movies/domain/repo/movie_repo.dart';
 import 'package:netflix_clone/core/movies/domain/usecase/get_movies_search.dart';
 import 'package:netflix_clone/core/movies/domain/usecase/get_movies_usecase.dart';
-import 'package:netflix_clone/features/home/presentation/bloc/movie_cubit/movie_cubit.dart';
+import 'package:netflix_clone/features/home/presentation/controller/movie_cubit/movie_cubit.dart';
+import 'package:netflix_clone/features/main/presentation/controller/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
 import 'package:netflix_clone/features/search/presentation/controller/search_bloc/search_bloc.dart';
 
 final getIt = GetIt.instance;
@@ -28,4 +29,5 @@ void setupServiceLocator() {
 
   getIt.registerFactory(() => MovieCubit(getIt()));
   getIt.registerFactory(() => SearchBloc(getIt()));
+  getIt.registerFactory(() => BottomNavBarCubit());
 }
