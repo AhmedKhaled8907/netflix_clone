@@ -5,16 +5,15 @@ import 'package:netflix_clone/core/utils/managers/style_manager.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
 
 class SearchBarItems extends StatelessWidget {
-  // final TextEditingController? controller;
-  // final void Function()? clearSearch;
-  // final FocusNode focusNode;
+  final TextEditingController? controller;
+  final void Function()? clearSearch;
+  final FocusNode focusNode;
 
   const SearchBarItems({
     super.key,
-    // required this.controller,
-    // required this.clearSearch,
-    // super.key,
-    // required this.focusNode,
+    required this.controller,
+    required this.clearSearch,
+    required this.focusNode,
   });
 
   @override
@@ -23,8 +22,8 @@ class SearchBarItems extends StatelessWidget {
       children: [
         Expanded(
           child: TextField(
-            // controller: controller,
-            // focusNode: focusNode,
+            controller: controller,
+            focusNode: focusNode,
             cursorColor: ColorManager.primaryColor,
             style: StyleManager.styleMedium16(context),
             decoration: InputDecoration(

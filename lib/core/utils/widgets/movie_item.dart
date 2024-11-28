@@ -45,7 +45,7 @@ class MovieItem extends StatelessWidget {
               ),
               const SizedBox(height: AppPadding.p8),
               Text(
-                stripHtmlTags(movie.summary!),
+                stripHtmlTags(movie.summary ?? ''),
                 maxLines: 3,
                 style: StyleManager.styleRegular12(context).copyWith(
                   overflow: TextOverflow.ellipsis,

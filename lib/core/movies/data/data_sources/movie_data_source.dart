@@ -1,11 +1,12 @@
-
 import 'package:dio/dio.dart';
+import 'package:netflix_clone/core/movies/domain/usecase/get_movies_search.dart';
 import 'package:netflix_clone/core/utils/managers/api_manager.dart';
 import 'package:netflix_clone/core/movies/data/models/movie_model/show.dart';
 import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
 
 abstract class MovieDataSource {
   Future<List<MovieEntity>> getMovies();
+  Future<List<MovieEntity>> getMoviesSearch(SearchMoviesParams param);
 }
 
 class MovieDataSourceImpl implements MovieDataSource {
@@ -20,7 +21,7 @@ class MovieDataSourceImpl implements MovieDataSource {
       final List<dynamic> results = response.data;
 
       return results
-          .where((result) => result['show']?['image']?['original'] != null)
+          .where((result) => result['show']?['image']?['medium'] != null)
           .map(
             (result) => Show.fromJson(result['show']),
           )
@@ -30,32 +31,21 @@ class MovieDataSourceImpl implements MovieDataSource {
     }
   }
 
-  // @override
-  // Future<List<MovieEntity>> getMovies() async {
-  //   try {
-  //     // Fetch data using Dio
-  //     var response = await apiService.get(endPoint: '/search/shows?q=all');
-  //     // log('API Response: ${response.data}');
-
-  //     // Ensure data is a List
-  //     if (response is List) {
-  //       List<MovieEntity> movies = getMoviesList(response);
-  //       log('Movies fetched: $movies');
-  //       return movies;
-  //     } else {
-  //       throw Exception("Unexpected response format: $response");
-  //     }
-  //   } catch (e) {
-  //     log('Error fetching movies: $e');
-  //     return [];
-  //   }
-  // }
-
-  // List<MovieEntity> getMoviesList(Map<String, dynamic> data) {
-  //   List<MovieEntity> movies = [];
-  //   for (var item in data['show']) {
-  //     movies.add(Show.fromJson(item['show']));
-  //   }
-  //   return movies;
-  // }
+  @override
+  Future<List<MovieEntity>> getMoviesSearch(SearchMoviesParams param) async {
+    var result = await dio.get(
+      ApiManager.searchMoviesBaseUrl(param.query),
+    );
+    if (result.statusCode == 200) {
+      final List<dynamic> results = result.data;
+      return results
+          .where((result) => result['show']?['image']?['medium'] != null)
+          .map(
+            (result) => Show.fromJson(result['show']),
+          )
+          .toList();
+    } else {
+      throw Exception('Failed to load show details');
+    }
+  }
 }

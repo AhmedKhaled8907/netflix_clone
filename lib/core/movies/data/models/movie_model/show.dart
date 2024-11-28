@@ -45,7 +45,7 @@ class Show extends MovieEntity {
       runtime: json['runtime'] as int? ?? 0,
       premiered: json['premiered'] as String?,
       summary: json['summary'] as String?,
-      image: json['image'] != null ? json['image']['original'] : null,
+      image: json['image'] != null ? json['image']['medium'] : null,
     );
   }
 }
