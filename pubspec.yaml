@@ -15,7 +15,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   go_router: ^14.6.1
   flutter_svg: ^2.0.16
-  animate_do: ^3.3.4
   dartz: ^0.10.1
   dio: ^5.7.0
   get_it: ^8.0.2
@@ -26,7 +25,6 @@ dev_dependencies:
   flutter_launcher_icons: "^0.14.1"
   flutter_test:
     sdk: flutter
-    
 
   flutter_lints: ^4.0.0
 
@@ -53,7 +51,6 @@ flutter_assets:
   output_path: lib/core/utils/managers/
   filename: assets_manager.dart
   field_prefix:
-
 
 flutter_launcher_icons:
   android: true
