@@ -1,21 +1,24 @@
-# netflix_clone
+# **Netflix Clone**
 
-A new Flutter project.
+I made this app with Flutter using clean architecture and  bloc as state management at the presentation layer.
 
-## Getting Started
+## Demo for the app
 
-This project is a starting point for a Flutter application.
+https://youtube.com/shorts/khY6PuJC3mU?si=s2CQbTOiLbHN5ocD
 
-A few resources to get you started if this is your first Flutter project:
+## Brief explanation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Netflix Clone is a movie and TV show data app that searches for them, too.
+I used (Tvmaze) for fetching the data.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
 
-'''
+| Splash View | Home View | Search View | Details View |
+| :-----------: | :---------: | :------------: | :--------------: |
+![](https://github.com/AhmedKhaled8907/netflix_clone/blob/main/screenshots/splash.png?raw=true)|![](https://github.com/AhmedKhaled8907/netflix_clone/blob/main/screenshots/home.png?raw=true)|![](https://github.com/AhmedKhaled8907/netflix_clone/blob/main/screenshots/search.png?raw=true)|![](https://github.com/AhmedKhaled8907/netflix_clone/blob/main/screenshots/details.png?raw=true)
+
+## Directory Structure for project
+```
 ├───core
 │   ├───error
 │   ├───movies
@@ -62,3 +65,4 @@ samples, guidance on mobile development, and a full API reference.
         └───presentation
             └───views
                 └───widgets
+```
