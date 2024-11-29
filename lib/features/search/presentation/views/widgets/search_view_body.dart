@@ -5,7 +5,7 @@ import 'package:netflix_clone/core/utils/managers/string_manager.dart';
 import 'package:netflix_clone/core/utils/managers/style_manager.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
 import 'package:netflix_clone/features/search/presentation/controller/search_bloc/search_bloc.dart';
-import 'package:netflix_clone/features/search/presentation/views/widgets/search_bar_items.dart';
+import 'package:netflix_clone/features/search/presentation/views/widgets/search_text_field.dart';
 import 'package:netflix_clone/features/search/presentation/views/widgets/search_results.dart';
 
 class SearchViewBody extends StatefulWidget {
@@ -99,7 +99,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SearchBarItems(
+          SearchTextField(
             controller: _controller,
             clearSearch: _clearSearchWithUnfocus,
             focusNode: _focusNode,

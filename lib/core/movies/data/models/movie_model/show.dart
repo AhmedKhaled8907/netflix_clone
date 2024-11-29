@@ -1,18 +1,22 @@
 import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
 
 class Show extends MovieEntity {
-  final int? id;
-  final String? url;
-  final String? name;
-  final String? type;
-  final String? language;
-  final List<String>? genres;
-  final String? status;
-  final int? runtime;
-  final String? premiered;
   @override
-  final String? summary;
-  final String? image;
+  int? id;
+  String? url;
+  String? name;
+  String? type;
+  String? language;
+  @override
+  List<String>? genres;
+  String? status;
+  @override
+  int? runtime;
+  @override
+  String? premiered;
+  @override
+  String? summary;
+  String? image;
 
   Show({
     required this.id,
@@ -30,6 +34,10 @@ class Show extends MovieEntity {
           title: name ?? 'unknown',
           poster: image ?? '',
           summary: summary ?? 'there is no summary',
+          id: id ?? 0,
+          premiered: premiered ?? 'unknown',
+          genres: genres ?? [],
+          runtime: runtime ?? 0,
         );
 
   factory Show.fromJson(Map<String, dynamic> json) {

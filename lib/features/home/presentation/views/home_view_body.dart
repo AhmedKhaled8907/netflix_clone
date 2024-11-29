@@ -25,7 +25,11 @@ class HomeViewBody extends StatelessWidget {
         },
         builder: (context, state) {
           if (state is MovieLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(
+              child: CircularProgressIndicator(
+                color: Colors.white,
+              ),
+            );
           } else if (state is MovieFailure) {
             return Center(child: Text(state.errMessage));
           } else if (state is MovieSuccess) {

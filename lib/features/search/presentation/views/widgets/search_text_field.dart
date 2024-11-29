@@ -4,12 +4,12 @@ import 'package:netflix_clone/core/utils/managers/string_manager.dart';
 import 'package:netflix_clone/core/utils/managers/style_manager.dart';
 import 'package:netflix_clone/core/utils/managers/values_manager.dart';
 
-class SearchBarItems extends StatelessWidget {
+class SearchTextField extends StatelessWidget {
   final TextEditingController? controller;
   final void Function()? clearSearch;
   final FocusNode focusNode;
 
-  const SearchBarItems({
+  const SearchTextField({
     super.key,
     required this.controller,
     required this.clearSearch,

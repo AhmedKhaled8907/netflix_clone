@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
+import 'package:netflix_clone/core/utils/managers/color_manager.dart';
 import 'package:netflix_clone/core/utils/managers/string_manager.dart';
 import 'package:netflix_clone/core/utils/managers/style_manager.dart';
 import 'package:netflix_clone/core/utils/widgets/movie_item_list_view.dart';
@@ -21,7 +22,11 @@ class SearchResults extends StatelessWidget {
             ),
           );
         } else if (state is SearchLoading) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: CircularProgressIndicator(
+              color: ColorManager.primaryColor,
+            ),
+          );
         } else if (state is SearchMoviesSuccess) {
           return _buildMoviesList(state.results, context);
         } else if (state is SearchMoviesError) {
@@ -47,35 +52,5 @@ class SearchResults extends StatelessWidget {
       );
     }
     return MovieItemListView(movies: results);
-
-    //  ListView.builder(
-    //   physics: const BouncingScrollPhysics(),
-    //   itemCount: results.length,
-    //   itemBuilder: (context, index) {
-    //     final searchEntity = results[index];
-    //     return InkWell(
-    //       onTap: () {
-    //         FocusScope.of(context).unfocus();
-    //         Navigator.of(context).push(
-    //           MaterialPageRoute(
-    //             builder: (context) => MovieDetailView(
-    //               id: searchEntity.id,
-    //             ),
-    //           ),
-    //         );
-    //       },
-    //       child: Column(
-    //         children: [
-    //           SearchResultsItem(
-    //             title: searchEntity.title,
-    //             posterPath: searchEntity.posterPath,
-    //             releaseDate: searchEntity.releaseDate,
-    //             voteAverage: searchEntity.voteAverage.toDouble(),
-    //           ),
-    //         ],
-    //       ),
-    //     );
-    //   },
-    // );
   }
 }

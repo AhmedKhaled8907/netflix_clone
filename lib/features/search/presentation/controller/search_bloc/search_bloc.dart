@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix_clone/core/movies/domain/entity/movie_entity.dart';
-import 'package:netflix_clone/core/movies/domain/usecase/get_movies_search.dart';
+import 'package:netflix_clone/core/movies/domain/usecase/get_movies_search_usecase.dart';
 
 part 'search_event.dart';
 part 'search_state.dart';
