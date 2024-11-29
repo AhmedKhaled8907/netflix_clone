@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:netflix_clone/core/movies/domain/usecase/get_movie_details_usecase.dart';
 import 'package:netflix_clone/core/movies/domain/usecase/get_movies_search_usecase.dart';
@@ -42,6 +44,7 @@ class MovieDataSourceImpl implements MovieDataSource {
     );
     if (result.statusCode == 200) {
       final List<dynamic> results = result.data;
+      log(results.toString());
       return results
           .where((result) => result['show']?['image']?['medium'] != null)
           .map(

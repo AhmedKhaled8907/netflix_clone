@@ -12,5 +12,5 @@ class StringManager {
   static const String noResultsFound = 'No Results Found';
   static const String searchHintText = 'Search for a movie or TV show';
   static const String topSearch = 'Top Searches';
-  static const String anythingYouWant = 'Anything you want';
+  static const String anythingYouWant = 'Search for anything you want';
 }
